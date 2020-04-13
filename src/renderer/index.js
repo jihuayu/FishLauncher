@@ -1,13 +1,13 @@
 import ReactDOM from "react-dom"
 import React from "react"
-import {Layout, Button, Row, Col, Menu, Tabs} from 'antd';
+import {Layout, Row, Col, Tabs} from 'antd';
 import {IndexFooter} from "./IndexFooter"
 
 const {Header, Content, Footer, Slider} = Layout
 const {TabPane} = Tabs
 import 'antd/dist/antd.css';
 
-function f(props){
+function App(props){
         return (<Layout style={{
             background: "url('https://source.unsplash.com/6eL_lMJDwjM/800x600')",
             height: "600px",
@@ -24,7 +24,7 @@ function f(props){
 
             <Content>
                 <div>
-                    <Tabs tabPosition="left">
+                    <Tabs tabPosition="left" type={"line"}>
                         <TabPane tab="Tab 1" key="1">
                             Content of Tab 1
                         </TabPane>
@@ -47,6 +47,6 @@ function f(props){
 }
 
 ReactDOM.render(
-    f(),
+    <App/>,
     document.getElementById("app"),
 );
