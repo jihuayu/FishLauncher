@@ -7,9 +7,8 @@ const {Header, Content, Footer, Slider} = Layout
 const {TabPane} = Tabs
 import 'antd/dist/antd.css';
 
-class App extends React.Component {
-    render() {
-        return <Layout style={{
+function f(props){
+        return (<Layout style={{
             background: "url('https://source.unsplash.com/6eL_lMJDwjM/800x600')",
             height: "600px",
             userSelect: "none"
@@ -38,19 +37,16 @@ class App extends React.Component {
                     </Tabs>
                 </div>
             </Content>
-
-
             <Footer style={{
                 backgroundColor: "rgba(255,255,255,0.3)",
                 padding: "15px"
             }}>
                 <IndexFooter/>
             </Footer>
-        </Layout>;
-    }
+        </Layout>);
 }
 
 ReactDOM.render(
-    <App/>,
+    f(),
     document.getElementById("app"),
 );
